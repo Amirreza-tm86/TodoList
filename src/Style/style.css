@@ -1,0 +1,438 @@
+:root {
+  --size: 1rem;
+  --border: 0.2rem;
+  --color: blue;
+}
+
+*,
+*:after,
+*:before{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+}
+
+body {
+  transition: all 0.5s ease-in-out;
+  background-color: #f2f2f2;
+  animation-delay: 0.8s;
+}
+
+#app {
+  height: 100%;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.text-todo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.grid-todo {
+  display: flex;
+  flex-direction: column;
+}
+
+.between-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  padding-top: 15px;
+}
+
+.nav {
+  display: inline;
+}
+
+.D-btnEnd {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-del {
+  outline: none;
+  border: none;
+  background-color: crimson;
+  height: 1.5rem;
+  width: 3.5rem;
+  border-radius: 2.5px;
+  color: #fff;
+  margin-right: 0.3rem;
+}
+
+.d-FormAuth {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-Todomain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-upd {
+  outline: none;
+  border: none;
+  background-color: #0094a4;
+  height: 1.5rem;
+  width: 3.5rem;
+  border-radius: 2.5px;
+  color: #fff;
+}
+
+.todo-submit {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 60%;
+  background: #fff;
+}
+
+.div-com {
+  width: 95%;
+}
+
+.submit {
+  margin-top: 1rem;
+}
+
+.inputTodo {
+  outline: none;
+  height: 1.5rem;
+  border: 2px solid black;
+}
+
+.btn {
+  outline: none;
+  width: 3rem;
+  background-color: #4627ff;
+  color: #fff;
+  height: 1.85rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.text-task {
+  color: #fff;
+  height: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: #ffb020;
+}
+
+.contanier {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topnav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 16px;
+}
+
+.topnav .link {
+  color: #000;
+  text-decoration: none;
+  padding: 16px;
+  font-size: 17px;
+}
+
+.topnav .link:hover {
+  background-color: #000;
+  color: #eee;
+}
+
+.topnav .link:active {
+  background-color: #000;
+  color: #eee;
+}
+
+.d-TodoBn {
+  display: flex;
+}
+
+.d-TodoPt {
+  width: 100%;
+  display: flex;
+}
+
+.auth-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: #f6f6f6;
+}
+
+.input[type="text"],
+.input[type="password"] {
+  outline: none;
+  width: 100%;
+  background-color: #f6f6f6;
+  color: #0d0d0d;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  margin: 5px 0 5px 0;
+  transition: all 0.5s ease-in-out;
+  animation-delay: 0.6s;
+  border: none;
+  border-bottom: 2px solid #8f7f7f;
+  border-radius: 5px;
+}
+
+.input[type="text"]::after,
+.input[type="password"]::after {
+  outline: none;
+  transition: all 0.5s ease-in-out;
+  animation-delay: 0.6s;
+}
+
+.input[type="text"]:focus-visible,
+.input[type="password"]:focus-visible {
+  outline: none;
+  background-color: #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+
+.todoInp {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e4e4e4;
+  border-top: none;
+  outline: none;
+}
+
+.todo-btn {
+  width: 60px;
+  height: 45px;
+  background: #1285ff;
+  color: #fff;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  color: black;
+  border: 2px solid rgb(64, 64, 141);
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  position: absolute;
+  content: '';
+  display: block;
+  border-style: solid;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked {
+  color: white;
+  background: rgb(64, 64, 141);
+}
+
+input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+
+input[type="checkbox"]:checked ~ label::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.d-BtnInp {
+  width: 100%;
+  display: flex;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.AuthForm {
+  padding: 0 0 20px 0;
+}
+
+.d-ErrorAuth {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.d-TodoList {
+  border: #000;
+}
+
+.t-showpass {
+  margin: 0;
+  margin-left: 0.25rem;
+}
+
+/* Set a style for all buttons */
+.authbtn {
+  background-color: #56baed;
+  color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 15px 80px;
+  margin-top: 15px;
+  font-size: 13px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  animation-delay: 1s;
+}
+
+.authbtn:hover {
+  opacity: 0.8;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+.d-form {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.clearfix {
+  display: flex;
+  justify-content: center;
+}
+
+.d-showpass {
+  display: flex;
+  justify-content: center;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.error {
+  width: 85%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffefef;
+  color: #ff2c6f;
+}
+
+.text {
+  font-size: 15px;
+}
+
+.flex {
+  display: flex;
+}
+
+.ErrorAuth {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin-left: 5px;
+  color: red;
+}
+
+::placeholder {
+  /* text-align: center; */
+  color: #0d0d0d;
+  font-size: 14px;
+}
+
+.d-Authenticate {
+  display: flex;
+  justify-content: center;
+}
+
+.FormInput {
+  width: 85%;
+}
+
+.p-forgetpass a {
+  color: #92badd;
+  margin: 0;
+  text-decoration: none;
+}
+
+.userIcon {
+  padding: 10px 0px 5px 0px;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 537px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+  .topnav {
+    display: flex;
+    flex-direction: column;
+  }
+  .todo-submit {
+    width: 90%;
+    padding: 0 0 6rem 0;
+  }
+  .d-TodoPt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+  .d-TodoBn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .todo-btn {
+    width: 40%;
+    height: 2rem;
+    font-size: 15px;
+  }
+  .d-FormAuth {
+    height: 65%;
+  }
+  .Todo-txt {
+    text-align: center;
+  }
+  .d-BtnInp {
+    display: inline;
+  }
+}
